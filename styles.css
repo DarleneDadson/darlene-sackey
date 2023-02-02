@@ -1,20 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
 
-
-
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }  
 
 body {
-background: hotpink;
-padding: 3rem;
-font-family: 'Roboto Condensed', sans-serif;
+    background: hotpink;
+    padding: 3rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-.container-box{display:flex;flex-direction: row;flex-wrap: wrap;}
-.skills, .education, .experience {width:30%;background:lightblue;border:2px solid orangered;}
- .first-section {
+img {max-width: 100%; height: auto;}
+
+
+header {  width: 100%; margin: 0 auto; text-align: center; }
+.container-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.skills,
+.education,
+.experience {
+    width: 100%;
+    background: lightblue;
+    /* border: 2px solid orangered; */
+}
+
+
+.personal-branding-logo { width: 25%;  margin: 0 auto;}
+.first-section {
     border: 4px solid black;
     padding: 3rem;
 }
+
 .button {
     width: 20em;
     width: 10em;
@@ -22,5 +46,40 @@ font-family: 'Roboto Condensed', sans-serif;
     padding: 1em;
     border-radius: 1em;
     background: white
-    
 }
+
+
+/*
+
+       ___  __             __        ___  __     ___  __  
+ |\/| |__  |  \ |  /\     /  \ |  | |__  |__) | |__  /__` 
+ |  | |___ |__/ | /~~\    \__X \__/ |___ |  \ | |___ .__/ 
+                                                          
+
+ */
+
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+    }
+    body {
+      background: #ffafcc;
+    }
+
+    header {  width: 70%; }
+    .container-box {
+        display: flex;
+        flex-direction: row;
+
+    }
+    
+    .skills,
+    .education,
+    .experience {
+        width: 33.3333%;
+        background: lightblue;
+     
+    }
+  }
+
